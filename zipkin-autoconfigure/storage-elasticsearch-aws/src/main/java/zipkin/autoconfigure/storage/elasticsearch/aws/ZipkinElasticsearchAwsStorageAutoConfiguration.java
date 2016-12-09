@@ -52,7 +52,7 @@ import static java.lang.String.format;
 @Conditional(ZipkinElasticsearchAwsStorageAutoConfiguration.AwsMagic.class)
 public class ZipkinElasticsearchAwsStorageAutoConfiguration {
   static final Pattern AWS_URL =
-      Pattern.compile("^https://[^.]+\\.([^.]+)\\.es\\.amazonaws\\.com", Pattern.CASE_INSENSITIVE);
+      Pattern.compile("^https?://[^.]+\\.([^.]+)\\.es\\.amazonaws\\.com", Pattern.CASE_INSENSITIVE);
   static final Logger log =
       Logger.getLogger(ZipkinElasticsearchAwsStorageAutoConfiguration.class.getName());
 
